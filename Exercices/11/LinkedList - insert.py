@@ -1,5 +1,6 @@
-#Wiaux Bastien
-
+# -------------------------------------------
+#   Solution par Wiaux Bastien ( @wiauxb )
+# -------------------------------------------
 def insert(self,s):
     suivant =self.first()
     if suivant is None:
@@ -17,3 +18,19 @@ def insert(self,s):
         suivant = avant.next()
         if suivant is None:
             avant.set_next(self.Node(s,None))
+            
+# -------------------------------------------
+#   Solution par ( @rverschuren ) 
+# -------------------------------------------
+def insert(self,s):
+    previous = None
+    current = self.__head
+    
+    if current is None:
+        self.__head = self.Node(s, None)
+        return
+    
+    while str(s) > str(current) and current is not None:
+        previous = current
+        current  = current.next()
+        previous.set_next(self.Node(s, current))
