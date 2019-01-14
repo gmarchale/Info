@@ -19,7 +19,7 @@ def generateTexSolutions(solutions):
     for solution in solutions:
         t += """
 solution proposée par {0[author]}
-\\begin{{minted}}{{python}}
+\\begin{{minted}}[linenos,tabsize=2,breaklines, fontsize=\\small]{{python}}
 {0[code]}
 \\end{{minted}}\n""".format(solution)
 
